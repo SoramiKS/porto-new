@@ -22,7 +22,7 @@ const Hero = () => {
                 </button>
             </div>
             <div className="flex gap-3">
-                <a href="https://github.com" target="_blank">
+                <a href="https://github.com/SoramiKS" target="_blank">
                     <FaGithub size={35} className="hover:scale-110 transition-all" />
                 </a>
                 <a href="https://www.instagram.com/freytaz_/" target="_blank">
