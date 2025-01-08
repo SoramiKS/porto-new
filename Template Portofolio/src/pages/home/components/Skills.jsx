@@ -8,7 +8,7 @@ const Skills = () => {
         {
             image: "https://tecdn.b-cdn.net/img/new/standard/nature/186.jpg",
             title: "Jokimil",
-            content: "A JavaScript library for building user interfaces.",
+            content: "Website jasa joki game wuthering waves dan honkai star rail. Kodingannya masih sangat berantakan karena saya convert dari wordpress ke html",
             linknya: "https://jokimil.vercel.app/"
         },
         {
