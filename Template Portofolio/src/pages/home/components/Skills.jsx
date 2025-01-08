@@ -9,7 +9,7 @@ const Skills = () => {
             image: "https://tecdn.b-cdn.net/img/new/standard/nature/186.jpg",
             title: "Jokimil",
             content: "A JavaScript library for building user interfaces.",
-            linknya: "jokimil.vercel.app"
+            linknya: "https://jokimil.vercel.app/"
         },
         {
             image: "https://tecdn.b-cdn.net/img/new/standard/nature/187.jpg",
