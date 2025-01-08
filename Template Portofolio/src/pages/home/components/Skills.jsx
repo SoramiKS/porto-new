@@ -2,7 +2,7 @@ import React from "react";
 import CardWithRippleExample from "./skill/skill-card";
 
 const Skills = () => {
-    const skills = ["React", "Tailwind CSS", "Node.js"];
+    const skills = ["Jokimil", "Tailwind CSS", "Node.js"];
 
     const cardData = [
         {
