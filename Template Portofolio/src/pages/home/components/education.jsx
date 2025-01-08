@@ -4,17 +4,17 @@ const Education = () => {
     const Education = [
         {
             title: "SMP St. Aloysius Turi",
-            address: "PT Maju Jaya",
-            date: "2022 - Sekarang",
+            address: "Turi, Donokerto, Kec. Turi, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55551",
+            date: "2019 - 2022",
             description:
-                "Membangun dan mengembangkan antarmuka pengguna website perusahaan menggunakan React, Redux, dan Tailwind CSS.",
+                "Tumbuh dalam iman, unggul dalam pengetahuan dan teknologi, berwawasan global, dan cinta lingkungan.",
         },
         {
-            title: "Web Developer Intern",
-            company: "Startup Kreatif",
-            date: "2021 (6 Bulan)",
+            title: "SMK Negeri 2 Yogyakarta",
+            address: "Jl. A.M. Sangaji No.47, Kec. Jetis, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55233",
+            date: "2022 - Sekarang",
             description:
-                "Merancang dan membangun website pemasaran produk dengan HTML, CSS, dan JavaScript.",
+                "Menghasilkan Tamatan Yang Berkarakter, Unggul, Berwawasan Lingkungan, dan Berdaya Saing Global.",
         },
     ];
 
