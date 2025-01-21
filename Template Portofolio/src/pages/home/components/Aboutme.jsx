@@ -193,7 +193,7 @@ const About = () => {
           <h1 className="flex p-14 text-3xl  w-full justify-center ">
             My Social Media
           </h1>
-          <div className="h-[500px] w-full rounded-xl">
+          <div className="h-[500px] max-h-auto w-full rounded-xl">
             <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center gap-y-10">
               {social.map((social, index) => (
                 <div className="inline-block text-center mx-4 grow">
