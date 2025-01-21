@@ -194,7 +194,7 @@ const About = () => {
             My Social Media
           </h1>
           <div className="h-[500px] w-full rounded-xl">
-            <div className="grid sm:grid-cols-2 md:grid-cols-3 lggrid-cols-4 grid-flow-col justify-items-center gap-y-10">
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center gap-y-10">
               {social.map((social, index) => (
                 <div className="inline-block text-center mx-4 grow">
                   <a href={social.link}>
