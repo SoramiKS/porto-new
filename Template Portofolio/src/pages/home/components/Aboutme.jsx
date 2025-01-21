@@ -75,7 +75,7 @@ const About = () => {
           About Me
         </h2>
         <div className="grid sm:grid-cols-1 lg:grid-cols-2 justify-items-center gap-4 ">
-          <div className="w-full h-[500px] no-scrollbar">
+          <div className="w-full h-[600px] no-scrollbar">
             <HoverCard
               columns={10}
               containerClassName="h-full w-full fadeInUp-animation text-focus-in "
@@ -114,7 +114,7 @@ const About = () => {
           </div>
 
           <div className="w-full h-[500px] fadeInUp-animation">
-            <div className="pb-5 rounded-xl h-[500px]">
+            <div className="pb-5 rounded-xl h-[600px]">
               <div
                 className="rounded-xl cursor-pointer fadeInUp-animation text-focus-in overflow-hidden
                 [&::-webkit-scrollbar]:w-2
@@ -126,7 +126,7 @@ const About = () => {
                 dark:[&::-webkit-scrollbar-track]:bg-neutral-700
                 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500"
                 style={{
-                  maxHeight: "460px" /* Atur tinggi maksimal */,
+                  maxHeight: "600px" /* Atur tinggi maksimal */,
                   overflowY: "auto" /* Menambahkan scroll vertikal */,
                 }}
               >
