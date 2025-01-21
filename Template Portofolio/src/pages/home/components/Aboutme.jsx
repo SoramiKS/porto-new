@@ -68,13 +68,13 @@ const About = () => {
   ];
 
   return (
-    <div className="bg-black bg-opacity-50" id="about">
+    <div className="bg-black bg-opacity-50 h-auto" id="about">
       <div className="bg-purple-950 bg-opacity-20 px-8 md:px-52 pb-4 h-auto ">
-        <div className="text-focus-in">
+        <div className="text-focus-in h-auto">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-12 text-center text-white fadeInUp-animation ">
           About Me
         </h2>
-        <div className="grid sm:grid-cols-1 lg:grid-cols-2 justify-items-center gap-4 ">
+        <div className="grid sm:grid-cols-1 lg:grid-cols-2 justify-items-center gap-4 h-auto">
           <div className="w-full h-[600px] no-scrollbar">
             <HoverCard
               columns={10}
