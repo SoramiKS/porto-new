@@ -1,32 +1,42 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
   return (
-    <nav className="fixed w-full z-20 top-0 start-0  border-gray-600 backdrop-blur font-android fadeInDown-animation">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 px-20">
-        <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">
-          .Portofolio
+    <nav className={`fixed w-full z-20 top-0 start-0 transition-all duration-300 ${
+      scrolled ? 'glass-nav' : 'bg-transparent'
+    }`}>
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 px-6 md:px-20">
+        <span className="self-center text-2xl font-bold whitespace-nowrap neon-text">
+          &lt;/Emiliano&gt;
         </span>
+        
         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
           <a
-            href="https://wa.link/qn2g58"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="grow text-white bg-green-700 p-3 rounded-2xl border border-green-600 hover:border-gray-700 inline-block text-center hover:gradient-bg animate-gradient relative"
+            href="#contact"
+            className="cyber-button hidden md:block"
           >
-            Message Me 📧
+            Let's Connect
           </a>
 
           <button
-            onClick={toggleMenu} // Menangani toggle menu
+            onClick={toggleMenu}
             type="button"
-            className="absolute top-4 right-4 p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden"
+            className="md:hidden p-2 w-10 h-10 justify-center text-sm text-gray-400 rounded-lg hover:text-cyan-400 transition-colors"
             aria-controls="navbar-sticky"
             aria-expanded={isOpen ? "true" : "false"}
           >
@@ -48,17 +58,18 @@ export default function Navbar() {
             </svg>
           </button>
         </div>
+        
         <div
           className={`${
             isOpen ? "block" : "hidden"
           } items-center justify-between w-full md:flex md:w-auto md:order-1`}
           id="navbar-sticky"
         >
-          <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+          <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 glass-card md:glass-card-none md:bg-transparent">
             <li>
               <a
-                href="#"
-                className="block py-2 px-3 rounded md:p-0 gradient-text animate-gradient grow"
+                href="#home"
+                className="block py-2 px-3 rounded md:p-0 neon-text hover:neon-purple transition-all duration-300"
                 aria-current="page"
               >
                 Home
@@ -67,8 +78,7 @@ export default function Navbar() {
             <li>
               <a
                 href="#about"
-                className="block py-2 px-3 md:p-0 text-white hover:gradient-text animate-gradient grow"
-                aria-current="page"
+                className="block py-2 px-3 md:p-0 text-white hover:text-cyan-400 transition-all duration-300"
               >
                 About
               </a>
@@ -76,25 +86,25 @@ export default function Navbar() {
             <li>
               <a
                 href="#projects"
-                className="block py-2 px-3 md:p-0 text-white hover:gradient-text animate-gradient grow"
+                className="block py-2 px-3 md:p-0 text-white hover:text-cyan-400 transition-all duration-300"
               >
                 Projects
               </a>
             </li>
             <li>
               <a
-                href="#educations"
-                className="block py-2 px-3 md:p-0 text-white hover:gradient-text animate-gradient grow"
+                href="#tech"
+                className="block py-2 px-3 md:p-0 text-white hover:text-cyan-400 transition-all duration-300"
               >
-                Education
+                Tech Stack
               </a>
             </li>
             <li>
               <a
-                href="#skills"
-                className="block py-2 px-3 md:p-0 text-white hover:gradient-text animate-gradient grow"
+                href="#contact"
+                className="block py-2 px-3 md:p-0 text-white hover:text-cyan-400 transition-all duration-300"
               >
-                Skills
+                Contact
               </a>
             </li>
           </ul>

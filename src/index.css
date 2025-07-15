@@ -2,39 +2,304 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Cyberpunk Color Variables */
+:root {
+  --neon-blue: #00f5ff;
+  --neon-purple: #bf00ff;
+  --neon-magenta: #ff0080;
+  --neon-green: #39ff14;
+  --dark-bg: #0a0a0f;
+  --dark-card: #1a1a2e;
+  --glass-bg: rgba(26, 26, 46, 0.3);
+  --glass-border: rgba(0, 245, 255, 0.2);
+}
 
+/* Loading Animation */
+.loading-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--dark-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeOut 1s ease-in-out 3s forwards;
+}
+
+.loading-text {
+  color: var(--neon-blue);
+  font-family: 'Courier New', monospace;
+  font-size: 1.2rem;
+  text-align: center;
+  animation: typewriter 2s steps(40) forwards;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid var(--neon-blue);
+}
+
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes fadeOut {
+  to { opacity: 0; visibility: hidden; }
+}
+
+/* Glassmorphism Effects */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 245, 255, 0.1);
+}
+
+.glass-nav {
+  background: rgba(10, 10, 15, 0.8);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+/* Neon Effects */
+.neon-glow {
+  box-shadow: 0 0 20px var(--neon-blue);
+  transition: all 0.3s ease;
+}
+
+.neon-glow:hover {
+  box-shadow: 0 0 30px var(--neon-blue), 0 0 40px var(--neon-blue);
+  transform: translateY(-2px);
+}
+
+.neon-text {
+  color: var(--neon-blue);
+  text-shadow: 0 0 10px var(--neon-blue);
+}
+
+.neon-purple {
+  color: var(--neon-purple);
+  text-shadow: 0 0 10px var(--neon-purple);
+}
+
+.neon-magenta {
+  color: var(--neon-magenta);
+  text-shadow: 0 0 10px var(--neon-magenta);
+}
+
+.neon-green {
+  color: var(--neon-green);
+  text-shadow: 0 0 10px var(--neon-green);
+}
+
+/* Cyberpunk Button */
+.cyber-button {
+  background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.cyber-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.cyber-button:hover::before {
+  left: 100%;
+}
+
+.cyber-button:hover {
+  box-shadow: 0 0 20px var(--neon-blue);
+  transform: translateY(-2px);
+}
+
+/* Tech Badge */
+.tech-badge {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  padding: 8px 16px;
+  border-radius: 20px;
+  color: var(--neon-blue);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.tech-badge:hover {
+  background: var(--neon-blue);
+  color: var(--dark-bg);
+  box-shadow: 0 0 15px var(--neon-blue);
+  transform: scale(1.05);
+}
+
+/* Parallax Effect */
+.parallax-bg {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+/* Hover Animations */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 245, 255, 0.3);
+}
+
+/* Project Card Enhancements */
+.project-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(15px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple), var(--neon-magenta));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover::before {
+  opacity: 1;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 245, 255, 0.2);
+}
+
+/* Emoji Animations */
+.emoji-hover {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.emoji-hover:hover {
+  transform: scale(1.2) rotate(10deg);
+}
+
+/* Console Easter Egg Styles */
+.konami-active {
+  animation: glitch 0.3s infinite;
+}
+
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  100% { transform: translate(0); }
+}
+
+/* Section Transitions */
+.section-fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.section-fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Dark Theme Base */
+body {
+  background: var(--dark-bg);
+  color: #ffffff;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dark-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--neon-blue);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--neon-purple);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .cyber-button {
+    padding: 10px 20px;
+    font-size: 0.875rem;
+  }
+  
+  .tech-badge {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+  }
+}
+
+/* Legacy animations kept for compatibility */
 .text-focus-in {
-	-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-          animation-timeline: view();
-          animation-range: entry 0 cover 20%;
+  animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  animation-timeline: view();
+  animation-range: entry 0 cover 20%;
 }
 
- @-webkit-keyframes text-focus-in {
-  0% {
-    -webkit-filter: blur(12px);
-            filter: blur(12px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
-    opacity: 1;
-  }
-}
 @keyframes text-focus-in {
   0% {
-    -webkit-filter: blur(12px);
-            filter: blur(12px);
+    filter: blur(12px);
     opacity: 0;
   }
   100% {
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
+    filter: blur(0px);
     opacity: 1;
   }
 }
 
+.fadeInDown-animation {
+  animation: fadeInDown 1.5s ease;
+}
 
 @keyframes fadeInDown {
   0% {
@@ -47,8 +312,8 @@
   }
 }
 
-.fadeInDown-animation {
-  animation: 1.5s fadeInDown;
+.fadeInUp-animation {
+  animation: fadeInUp 1.5s ease;
 }
 
 @keyframes fadeInUp {
@@ -62,245 +327,10 @@
   }
 }
 
-.fadeInUp-animation {
-  animation: 1.5s fadeInUp;
-
+.grow {
+  transition: all 0.2s ease-in-out;
 }
 
-.hover-underline {
-  font-size: 2rem;
-  color: #ffffff;
-  position: relative;
-  display: inline-block;
-}
-
-.hover-underline::after,
-.hover-underline::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(to right, #ff0000, #00ffff);
-  bottom: -5px;
-  left: 0;
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.4s ease-out;
-}
-
-.hover-underline::before {
-  top: -5px;
-  transform-origin: left;
-}
-
-.hover-underline:hover::after,
-.hover-underline:hover::before {
-  transform: scaleX(1);
-}
-
-.scale-in-center {
-	animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-
-/* ----------------------------------------------
- * Generated by Animista on 2025-1-20 19:55:31
- * Licensed under FreeBSD License.
- * See http://animista.net/license for more info. 
- * w: http://animista.net, t: @cssanimista
- * ---------------------------------------------- */
-
-/**
- * ----------------------------------------
- * animation scale-in-center
- * ----------------------------------------
- */
- @keyframes scale-in-center {
-  0% {
-    transform: scale(0);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-
-/* Untuk memberikan efek zoom yang smooth */
-.map-container iframe {
-  transition: transform 0.5s ease, filter 0.5s ease; /* Menambahkan filter untuk transisi zoom */
-}
-
-.map-container:hover iframe {
-  transform: scale(1.3); /* Memperbesar map saat dihover */
-}
-
-
-
-.gradient-text {
-  background: linear-gradient(
-    to right,
-    #3b82f6,
-    #ef4444,
-    #22c55e,
-    #3b82f6,
-    #ef4444,
-    #22c55e
-  );
-  background-size: 300% 300%; /* Memastikan gradient cukup besar untuk animasi */
-  background-clip: text;
-  color: transparent;
-  -webkit-background-clip: text;
-}
-
-.gradient-bg {
-  background: linear-gradient(
-    to right,
-    #3b82f6,
-    #ef4444,
-    #22c55e,
-    #3b82f6,
-    #ef4444,
-    #22c55e
-  );
-  background-size: 300% 300%; /* Memastikan gradient cukup besar untuk animasi */
-}
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 100% 50%;
-  }
-}
-
-.hover\:gradient-text:hover {
-  background: linear-gradient(
-    to right,
-    #3b82f6,
-    #ef4444,
-    #22c55e,
-    #3b82f6,
-    #ef4444,
-    #22c55e
-  );
-
-  background-clip: text;
-  background-size: 300% 300%; /* Memastikan gradient cukup besar untuk animasi */
-  background-position: 100% 50%; /* Make the hover effect active */
-  color: transparent; /* Ensure text is transparent when hovering */
-}
-
-.hover\:gradient-bg:hover {
-  background: linear-gradient(
-    to right,
-    #3b82f6,
-    #ef4444,
-    #22c55e,
-    #3b82f6,
-    #ef4444,
-    #22c55e
-  );
-
-  background-size: 300% 300%; /* Memastikan gradient cukup besar untuk animasi */
-  background-position: 100% 50%; /* Make the hover effect active */
-}
-
-.container {
-  width: 50vw; /* 50% dari lebar viewport */
-  height: 30vh; /* 30% dari tinggi viewport */
-}
-
-@font-face {
-  font-family: "Nuku1"; /* Nama font yang ingin kamu gunakan */
-  src: url("./asset/fonts/nuku1.ttf") format("truetype"); /* Gantilah dengan path yang sesuai dengan folder */
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Android"; /* Nama font yang ingin kamu gunakan */
-  src: url("./asset/fonts/android.ttf") format("truetype"); /* Gantilah dengan path yang sesuai dengan folder */
-  font-weight: normal;
-  font-style: normal;
-}
-
-.grow { transition: all .2s ease-in-out; }
-.grow:hover { transform: scale(1.1); }
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.animate-fadeIn {
-  animation: fadeIn 1s ease-in-out;
-}
-
-@keyframes slideInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-slideInUp {
-  animation: slideInUp 1s ease-in-out;
-}
-
-@keyframes expandNavbar {
-  0% {
-    width: 0%; /* Mulai dengan lebar 0 */
-    opacity: 0; /* Isi navbar tidak terlihat */
-  }
-
-  30% {
-    width: 10%; /* Mulai dengan lebar 0 */
-    opacity: 1; /* Isi navbar tidak terlihat */
-  }
-
-  50% {
-    width: 24%; /* Lebar penuh, tetapi opacity masih 0 */
-    opacity: 1; /* Masih tidak terlihat */
-  }
-
-  100% {
-    width: 30%; /* Lebar penuh */
-    opacity: 1; /* Isi navbar muncul */
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.animate-expandNavbar {
-  animation: expandNavbar 0.5s ease-in-out forwards;
-}
-
-.animate-fadeIn {
-  animation: fadeIn 1s ease-in-out forwards;
-}
-
-.delay-500 {
-  animation-delay: 0.5s;
-}
-
-html {
-  scroll-margin-top: 100px;
-  scroll-behavior: smooth;
+.grow:hover {
+  transform: scale(1.1);
 }
