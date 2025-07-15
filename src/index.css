@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom Font */
+@font-face {
+  font-family: 'Nuku1';
+  src: url('./asset/fonts/nuku1.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* Cyberpunk Color Variables */
 :root {
   --neon-blue: #00f5ff;
@@ -245,7 +253,7 @@ html {
 body {
   background: var(--dark-bg);
   color: #ffffff;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Nuku1', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 /* Custom Scrollbar */
