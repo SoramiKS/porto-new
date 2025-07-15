@@ -20,12 +20,14 @@ import {
   IoLogoJavascript,
 } from "react-icons/io";
 import { 
-  SiMikrotik,
   SiTypescript,
   SiMongodb,
   SiPostgresql,
   SiVercel
-} from "react-icons/io";
+} from "react-icons/si";
+import { 
+  SiMikrotik
+} from "react-icons/si";
 
 const TechStack = () => {
   const [isVisible, setIsVisible] = useState(false);
