@@ -18,14 +18,14 @@ import {
 } from "react-icons/ri";
 import { 
   IoLogoJavascript,
-  IoLogoVercel 
 } from "react-icons/io";
 import { 
   SiMikrotik,
   SiTypescript,
   SiMongodb,
-  SiPostgresql
-} from "react-icons/si";
+  SiPostgresql,
+  SiVercel
+} from "react-icons/io";
 
 const TechStack = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -87,7 +87,7 @@ const TechStack = () => {
       color: "neon-magenta",
       techs: [
         { name: "Figma", icon: FaFigma, color: "text-pink-500" },
-        { name: "Vercel", icon: IoLogoVercel, color: "text-white" },
+        { name: "Vercel", icon: SiVercel, color: "text-white" },
         { name: "GitHub", icon: FaGithub, color: "text-white" }
       ]
     }
