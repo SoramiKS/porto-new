@@ -4,8 +4,8 @@
 
 /* Custom Font */
 @font-face {
-  font-family: 'Nuku1';
-  src: url('./asset/fonts/nuku1.ttf') format('truetype');
+  font-family: 'Android';
+  src: url('./asset/fonts/android.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -253,7 +253,7 @@ html {
 body {
   background: var(--dark-bg);
   color: #ffffff;
-  font-family: 'Nuku1', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 /* Custom Scrollbar */

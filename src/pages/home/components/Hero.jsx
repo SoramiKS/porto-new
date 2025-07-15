@@ -12,7 +12,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="bg-black bg-opacity-30" id="home">
+    <div className="bg-black bg-opacity-30 font-android" id="home">
       <div className="flex flex-col items-center justify-center min-h-screen relative px-4 sm:px-8 md:px-16 lg:px-24 parallax-bg">
         
         {/* Floating Elements */}

@@ -8,7 +8,7 @@ export default function Container({ children }) {
   };
 
   return (
-    <div className="relative w-full text-white font-android min-h-screen">
+    <div className="relative w-full text-white min-h-screen">
       {/* Video Background with Cyberpunk Overlay */}
       <video
         className="fixed top-0 left-0 w-full h-full object-cover z-[-2]"

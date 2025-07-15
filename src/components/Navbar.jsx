@@ -17,7 +17,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className={`fixed w-full z-20 top-0 start-0 transition-all duration-300 ${
+    <nav className={`fixed w-full z-20 top-0 start-0 transition-all duration-300 font-android ${
       scrolled ? 'glass-nav' : 'bg-transparent'
     }`}>
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 px-6 md:px-20">
